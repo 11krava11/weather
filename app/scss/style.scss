@@ -1,0 +1,91 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.weather {
+  background-color: #a6dbff;
+  height: 100vh;
+  padding: 50px 0;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  &__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    @include r(768) {
+      font-size: 20px;
+    }
+    @include r(576) {
+      font-size: 15px;
+    }
+    @include r(475) {
+      font-size: 13px;
+    }
+  }
+  &__inner {
+    margin: 0 auto;
+    max-width: 300px;
+    border: 5px solid #ffffff;
+    border-radius: 15px;
+    height: 500px;
+    background-color: transparent;
+    backdrop-filter: contrast(.5);
+  }
+  &__city {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    align-self: start;
+  }
+  &__stats {
+    padding: 30px 30px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include r(576) {
+      max-width: 225px;
+      height: 440px;
+    }
+  } 
+  &__name {
+    font-size: 30px;
+    margin-bottom:25px;
+    padding-top: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    @include r(576) {
+      font-size: 25px;
+    }
+  }
+  &__temp {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  &__desc {
+    font-weight: 700;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    @include r(576) {
+      font-size: 15px;
+    }
+  }
+  &__wind {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+@import 'media';
